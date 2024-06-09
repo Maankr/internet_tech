@@ -1,0 +1,306 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #000;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #e6618c;
+	text-decoration: underline;
+}
+a:hover {
+	color: #fdf208;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #c83867;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+body {
+	color: #404040;
+	background: #f9f9f9;
+	font-family: 'Open Sans', sans-serif;
+	
+  }
+  
+  header {
+	color: #fff;
+	background-image: url('photoHTML/logo.png');
+	background-size: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+    height: 300px;
+	background-size: contain;
+    max-width: 2000px; 
+	margin-left:  200px;
+	margin-right:  200px;
+	margin-top: 20px;
+  }
+  
+  h1 
+  {
+	font-size: 2em; 
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 25px;
+	text-align: center;
+  }
+
+  h3 
+  {
+	font-size: 2em; 
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 25px;
+	text-align: center;
+
+  }
+
+  form {
+	background-color: rgba(6, 56, 103, 0.83);
+	display: table;
+	margin: 0 auto 10px auto; /* отступы вокруг формы */
+	padding: 20px; /* внутренние отступы */
+	border-radius: 10px;
+  }
+  
+   input[type="text"], 
+   input[type="email"]
+  {
+	font-size: 1.5em; /* размер шрифта */
+	padding: 12px 20px 13px 20px; /* отступ содержимого от границы тега */
+	font-weight: 500;
+	color:#051267;
+  }
+
+  input[type="submit"]
+   {
+	background-color:rgba(9, 9, 100, 0.834);
+	color:#fff ;
+	font-size:1.5em;
+	font-weight: 700;
+	cursor: pointer;
+  }
+  
+  input
+  {
+	width: 350px; /* ширина полей формы */
+	height: 50px;
+	margin-right: 20px;
+	border: 0;
+	box-sizing: border-box;
+  }
+
+
+  @media screen and (max-width: 1150px) 
+  {
+	 input[type="text"], 
+	 input[type="email"], 
+	 input[type="submit"] 
+	 {
+	  width: 700px; /* ширина для экрана до 1150px */
+	  align-content: center;
+	  margin-bottom: 10px;
+	  display: block;
+	 }
+  }
+
+
+  @media screen and (max-width: 1150px) 
+    {
+	  form
+	    {
+		  margin-left:  200px;
+	      margin-right:  200px;
+	  } 
+	}
+
+  @media screen and (max-width: 390px)
+   {
+	 input[type="text"], 
+	 input[type="email"], 
+	 input[type="submit"]
+	   {
+	     align-content: center;
+	     margin-bottom: 10px;
+	     margin-right: 0px;
+	     display: block;
+	     width: 700px; 
+       }
+
+ }
+
+@media screen and (max-width: 390px) 
+ {
+		form
+		  {
+			margin-left:  150px;
+			margin-right:  150px;
+		  }
+ }
+
+
+ @media screen and (max-width: 1150px) 
+ {
+	header{
+            background-size: 1000px;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100px;
+			max-height: 200px;
+            background-size: contain;
+            width: 700px; 
+            margin-top: 20px;
+		  }
+ }
+ 
+
+html{font-size: 70%;}
+
+
+  .subscribe input {float: left;} 
+  
+  article 
+  {
+	width: 1100px; 
+	margin: 0 auto ;
+	padding: 50px 20px;
+  }
+  
+  article > h1 
+  {
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: 25px;
+  }
+  
+  article > p 
+  {
+	margin-bottom: 30px;
+  }
+  
+  article> img 
+  {
+	height: 300px;
+	width: 270px;
+	float: left;
+	margin: 0px 30px 20px 0px;
+
+  }
+  
+  article> p> a
+  {
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: 25px;
+  }
+
+  address
+  {
+	width: 1100px; 
+	margin: 0 auto 10px auto; /* отступы вокруг формы */
+	margin-bottom: 10px;
+  }
+
+  address> img 
+    {
+		margin: 0px 30px 20px 0px;
+		float: left;
+	}
+
+	address > p 
+	 {
+		margin-bottom: 7px;
+		font-size:1.5em;
+	    font-weight: 700;
+	 }
+
+	  address > p > a
+	  {
+		
+	    cursor: pointer;
+	  }
+
+	  footer
+	  {
+		color: #051267;
+		font-size:3em;
+	    font-weight: 700;
+		height: 80px;
+		text-align: center;
+		padding: 10px;
+	  }
